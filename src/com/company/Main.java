@@ -9,12 +9,12 @@ public class Main extends JFrame implements ActionListener {
 
     private JButton Shuffle, Head, Pick, Hand;
     private JEditorPane Resp;
-    private JLabel msn;
+    private JLabel msn, bi, op;
     private Deck d;
 
     public static void main(String[] args) {
         Main frame = new Main();
-        frame.setSize(300, 300);
+        frame.setSize(350, 300);
         frame.createGUI();
         frame.setVisible(true);
         frame.createDeck();
@@ -29,16 +29,18 @@ public class Main extends JFrame implements ActionListener {
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
 
-        Shuffle = new JButton("Shuffle");
+        bi = new JLabel("Bienvenido \n Seleccione una Opcion:");
+        window.add(bi);
+        Shuffle = new JButton("1. Mezclar deck");
         window.add(Shuffle);
         Shuffle.addActionListener(this);
-        Head = new JButton("Head");
+        Head = new JButton("2. Sacar una carta");
         window.add(Head);
         Head.addActionListener(this);
-        Pick = new JButton("Pick");
+        Pick = new JButton("3. Carta al azar");
         window.add(Pick);
         Pick.addActionListener(this);
-        Hand = new JButton("Hand");
+        Hand = new JButton("4. Una mano de 5 cartas");
         window.add(Hand);
         Hand.addActionListener(this);
         msn = new JLabel("Resultado: ");
@@ -49,7 +51,7 @@ public class Main extends JFrame implements ActionListener {
         //Resp.setBounds(new Rectangle(25, 15, 250, 100));
         window.add(Resp);
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent event) {
         Resp.setText("");
