@@ -44,21 +44,21 @@ public class Main extends JFrame implements ActionListener {
         msn = new JLabel("Resultado: ");
         window.add(msn);
         Resp = new JEditorPane();
-        //Resp.setContentType("text/html");
+        //Resp.setContentType("text/html"); :D
         Resp.setSize(new Dimension(250,100));
         //Resp.setBounds(new Rectangle(25, 15, 250, 100));
         window.add(Resp);
     }
+    
     @Override
     public void actionPerformed(ActionEvent event) {
-
         Resp.setText("");
+
         if(event.getSource() == Shuffle){
             Resp.setText(d.Suffle());
         }
         if(event.getSource() == Head){
             Resp.setText(d.Head());
-
         }
         if(event.getSource() == Pick){
             Resp.setText(d.Pick());

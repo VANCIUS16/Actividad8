@@ -36,7 +36,6 @@ public class Deck{
                 default:
                     valor = (i+1)+"" ;
             }
-
             Card c = new Card(color,valor,palo);
             list1.add(c);
         }
@@ -46,7 +45,6 @@ public class Deck{
         System.out.println("\nShuffle");
         Collections.shuffle(list1);
         System.out.println("El deck a sido mezclado");
-
         return "El deck a sido mezclado";
     }
     public String Head(){
